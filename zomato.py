@@ -9,7 +9,7 @@ st.set_page_config(
 
 df_food = import_data("./datasets/food.xlsx")
 # df_menu = import_data("./datasets/menu.xlsx")
-# df_orders_Type = import_data("./datasets/orders_Type.xlsx") 
+df_orders_Type = import_data("./datasets/orders_Type.xlsx") 
 # df_orders = import_data("./datasets/orders.xlsx") 
 df_restaurant = import_data("./datasets/restaurant.xlsx") 
 # df_users = import_data("./datasets/users.xlsx") 

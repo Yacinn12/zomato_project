@@ -63,11 +63,14 @@ def metrics():
 
     style_metric_cards()
 
-
+def df_food_cleaned():
+    df_food = import_data("./datasets/food.xlsx")
+    df_food.dropna(axis=0 ,how="all", inplace=True)
+    
+    return df_food
 
 
 def df_resto_cleaned():
-    # df = pd.read_excel("./datasets/biling.xlsx" )
     df_restaurant = import_data("./datasets/restaurant.xlsx")
     df_restaurant["r_id"] = df_restaurant["r_id"].astype("str")
     df_restaurant["rating"] = df_restaurant["rating"].replace('--', np.nan).astype("float")
@@ -112,7 +115,7 @@ if __name__ == "__main__":
     with st.container():
         metrics()
 
-        #datasets()
+        datasets()
 
-        #bar_chart()
+        bar_chart()
         
